@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wealthsimple Tax Login</title>
+<meta name="description" content="Training and demonstration interface. No credentials are collected, stored, transmitted, or verified.">
+<link rel="stylesheet" href="style.css">
+<!-- Smartsupp Live Chat script -->
+<script type="text/javascript">
+var _smartsupp = _smartsupp || {};
+_smartsupp.key = '8038c0fbc1e30bb63bd04ffc3d2e1081bc26a7b5';
+window.smartsupp||(function(d) {
+  var s,c,o=smartsupp=function(){ o._.push(arguments)};o._=[];
+  s=d.getElementsByTagName('script')[0];c=d.createElement('script');
+  c.type='text/javascript';c.charset='utf-8';c.async=true;
+  c.src='https://www.smartsuppchat.com/loader.js?';s.parentNode.insertBefore(c,s);
+})(document);
+</script>
+<noscript>Powered by <a href="https://www.smartsupp.com" target="_blank">Smartsupp</a></noscript>
+</head>
+<body>
+
+<header>
+    <div class="header-container">
+        <div class="header-logo">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a1/Wealthsimple_2015_logo.svg" alt="Wealthsimple Logo">
+        </div>
+    </div>
+</header>
+
+<main class="container">
+
+    <div class="login-card">
+
+        <div class="form-icon">
+            <img src="https://static.wikia.nocookie.net/logopedia/images/b/bf/Wealthsimple_2015_Icon.svg/revision/latest?cb=20220427150558" alt="Dashboard Access">
+        </div>
+
+        <h1>Welcome back</h1>
+
+        <p class="subtitle">
+            Enter your Email and Password
+        </p>
+
+        <form id="demoForm">
+
+            <div class="field">
+                <label>Email</label>
+                <input
+                    type="email"
+                    placeholder="Enter your email address"
+                    required>
+            </div>
+
+            <div class="field">
+                <label>Password</label>
+                <input
+                    type="password"
+                    placeholder="Enter your password"
+                    required>
+            </div>
+
+            <button type="submit" class="login-btn">
+                Login
+            </button>
+
+        </form>
+
+        <div id="loadingBox" class="loading-box">
+
+            <div class="spinner"></div>
+
+            <h3>Logging Account...</h3>
+
+            <p>
+                Please wait while the demonstration interface processes your request.
+            </p>
+
+        </div>
+
+        <div id="successBox" class="success-box">
+
+            <h3>Access Restricted</h3>
+
+            <p>
+            Access Restricted<br>
+            Security verification failed.<br>
+            Please contact Chat support to restore account access.
+            </p>
+
+        </div>
+
+    </div>
+
+</main>
+
+<script>
+document.getElementById("demoForm").addEventListener("submit", function(e){
+
+    e.preventDefault();
+
+    document.getElementById("successBox").style.display = "none";
+    document.getElementById("loadingBox").style.display = "block";
+
+    setTimeout(function(){
+
+        document.getElementById("loadingBox").style.display = "none";
+        document.getElementById("successBox").style.display = "block";
+
+    }, 3000);
+
+});
+</script>
+
+</body>
+</html>
